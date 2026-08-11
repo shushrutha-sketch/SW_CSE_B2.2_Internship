@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Portfolio</title>
+
+    <style>
+
+        /* ---------- GENERAL ---------- */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #222;
+        }
+
+
+        /* ---------- NAVIGATION ---------- */
+
+        header {
+            background-color: #275ec4;
+            padding: 20px 8%;
+            position: sticky;
+            top: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        
+
+        /* ---------- HOME ---------- */
+
+        #home {
+            min-height: 90vh;
+
+            display: flex;
+            align-items: center;
+
+            padding: 50px 10%;
+
+            background-color: #f5f5f5;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+
+        .hero h1 span {
+            color: #5897ce;
+        }
+
+        .hero h2 {
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin-bottom: 25px;
+        }
+
+        .button {
+            display: inline-block;
+
+            background-color: #3c0557;
+            color: white;
+
+            padding: 12px 25px;
+
+            text-decoration: none;
+
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #008c94;
+        }
+
+
+        /* ---------- COMMON SECTIONS ---------- */
+
+        section {
+            padding: 80px 10%;
+        }
+
+        section h2 {
+            font-size: 35px;
+            margin-bottom: 25px;
+        }
+
+
+        /* ---------- ABOUT ---------- */
+
+        #about {
+            text-align: center;
+        }
+
+        #about p {
+            max-width: 700px;
+            margin: auto;
+        }
+
+
+        /* ---------- SKILLS ---------- */
+
+        #skills {
+            background-color: #f5f5f5;
+            text-align: center;
+        }
+
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill {
+            background-color: white;
+
+            padding: 15px 25px;
+
+            border-radius: 8px;
+
+            border: 1px solid #ddd;
+        }
+
+        .skill:hover {
+            transform: translateY(-5px);
+        }
+
+
+        /* ---------- PROJECTS ---------- */
+
+        #projects {
+            text-align: center;
+        }
+
+        .projects-container {
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 25px;
+        }
+
+        .project {
+            width: 300px;
+
+            padding: 25px;
+
+            border: 1px solid #ddd;
+
+            border-radius: 10px;
+
+            text-align: left;
+        }
+
+        .project h3 {
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            margin-bottom: 15px;
+        }
+
+        .project a {
+            color: #00adb5;
+
+            text-decoration: none;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+        }
+
+
+        /* ---------- CONTACT ---------- */
+
+        #contact {
+            background-color: #f5f5f5;
+
+            text-align: center;
+        }
+
+        #contact p {
+            margin: 10px;
+        }
+
+        #contact a {
+            color: #00adb5;
+        }
+
+
+        /* ---------- FOOTER ---------- */
+
+        footer {
+            background-color: #111;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 20px;
+        }
+
+
+        /* ---------- MOBILE ---------- */
+
+        @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+
+                gap: 15px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .projects-container {
+                justify-content: center;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVIGATION -->
+
+    <header>
+
+        <nav>
+
+            <h1>My Portfolio</h1>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- HOME -->
+
+    <section id="home">
+
+        <div class="hero">
+
+            <h1>
+                Hi, I'm
+                <span>Shushrutha P R</span>
+            </h1>
+
+            <h2>
+                Computer Science Student
+            </h2>
+
+            <p>
+                I am a Computer Science student passionate about
+                programming, web development and technology.
+                I enjoy learning new skills and building projects.
+            </p>
+
+            <a href="#projects" class="button">
+                View My Projects
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+        <h2>About Me</h2>
+
+        <p>
+            Hello! I am a Computer Science student interested in
+            software development and technology.
+
+            I am currently learning programming, web development,
+            artificial intelligence and machine learning.
+
+            My goal is to learn and improve my skills and
+            build useful and creative projects.
+        </p>
+
+    </section>
+
+
+
+    <!-- SKILLS -->
+
+    <section id="skills">
+
+        <h2>My Skills</h2>
+
+        <div class="skills-container">
+
+            <div class="skill">
+                HTML
+            </div>
+
+            <div class="skill">
+                CSS
+            </div>
+
+            <div class="skill">
+                C Programming
+            </div>
+
+            <div class="skill">
+                Python
+            </div> 
+
+        </div>
+
+    </section>
+
+
+
+    <!-- PROJECTS -->
+
+    <section id="projects">
+
+        <h2>My Projects</h2>
+
+        <div class="projects-container">
+
+
+            <div class="project">
+
+                <h3>
+                    Portfolio Website
+                </h3>
+
+                <p>
+                    A personal portfolio website created
+                    using HTML and CSS.
+                </p>
+
+                <a href="#">
+                    View Project →
+                </a>
+
+            </div>
+
+
+
+            <div class="project">
+
+                <h3>
+                    C Programming Project
+                </h3>
+
+                <p>
+                    A simple programming project created
+                    while learning C programming.
+                </p>
+
+                <a href="#">
+                    View Project →
+                </a>
+
+            </div>
+
+
+
+            <div class="project">
+
+                <h3>
+                    AI / ML Project
+                </h3>
+
+                <p>
+                    A beginner machine learning project
+                    created while learning AI and ML.
+                </p>
+
+                <a href="#">
+                    View Project →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+        <h2>
+            Contact Me
+        </h2>
+
+        <p>
+            Email:
+            <a href="mailto:shushrutha080@email.com">
+                shushrutha080@email.com
+            </a>
+        </p>
+
+         <p>
+            LinkedIn:
+            <a href="#">
+                linkedin.com/in/Shushrutha P R
+            </a>
+        </p>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Shushrutha P R. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
