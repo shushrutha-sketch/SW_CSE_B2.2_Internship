@@ -4,13 +4,16 @@ import headphones from "./assets/sony.jpg";
 import ButtonDemo from "./components/P3";
 import Counter from "./components/StateExample1";
 import ToggleText from "./components/StateExample2";
+import NameInput from "./components/StateExample3";
 import "./App.css";
 
 function App() {
   return (
     <>
-      <ToggleText/>
+      <NameInput />
       
+      <ToggleText/>
+
       <Counter />
       
       <Welcome name="Shushrutha" />
