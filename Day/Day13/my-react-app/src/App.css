@@ -182,3 +182,11 @@
     border-right-color: var(--border);
   }
 }
+.card {
+  width: 200px;
+  height: 450px;
+}
+.action-btn{
+  margin: 6px 6px 6px 0;
+  padding: 6px 10px;
+}
