@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>My Portfolio</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0b1020;
+            color: white;
+        }
+
+
+        /* Navigation */
+
+        nav {
+            background-color: #111831;
+            padding: 20px 8%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav h2 {
+            color: #7c5cff;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            color: #ff4ecd;
+        }
+
+
+        /* Home */
+
+        .home {
+            min-height: 90vh;
+
+            display: flex;
+            align-items: center;
+
+            padding: 70px 10%;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #0b1020,
+                    #21134d,
+                    #101b3d
+                );
+        }
+
+        .home-text {
+            max-width: 700px;
+        }
+
+        .small-text {
+            color: #ff4ecd;
+            font-size: 18px;
+        }
+
+        .home h1 {
+            font-size: 60px;
+            margin: 15px 0;
+        }
+
+        .home h1 span {
+            color: #7c5cff;
+        }
+
+        .home h3 {
+            color: #b8b8c8;
+            font-size: 25px;
+        }
+
+        .home p {
+            color: #c7c7d1;
+            line-height: 1.8;
+            margin-top: 20px;
+        }
+
+        .button {
+            display: inline-block;
+
+            margin-top: 30px;
+            padding: 13px 25px;
+
+            background: linear-gradient(
+                90deg,
+                #7c5cff,
+                #ff4ecd
+            );
+
+            color: white;
+            text-decoration: none;
+
+            border-radius: 25px;
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+        }
+
+
+        /* Common sections */
+
+        section {
+            padding: 80px 10%;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 35px;
+            margin-bottom: 45px;
+        }
+
+        .title span {
+            color: #ff4ecd;
+        }
+
+
+        /* About */
+
+        .about {
+            background-color: #10162d;
+        }
+
+        .about-content {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .about-box {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .about-box p {
+            color: #c7c7d1;
+            line-height: 1.8;
+        }
+
+        .info {
+            background-color: #171f3d;
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid #7c5cff;
+        }
+
+        .info p {
+            margin: 10px 0;
+        }
+
+
+        /* Skills */
+
+        .skills {
+            background-color: #0b1020;
+        }
+
+        .skill-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .skill {
+            width: 150px;
+            padding: 25px 10px;
+
+            text-align: center;
+
+            background-color: #151d38;
+
+            border-radius: 12px;
+
+            border: 1px solid #29345c;
+
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-8px);
+            border-color: #ff4ecd;
+            box-shadow: 0 0 20px #38234d;
+        }
+
+        .skill h3 {
+            color: #7c5cff;
+            margin-bottom: 8px;
+        }
+
+
+        /* Projects */
+
+        .projects {
+            background-color: #10162d;
+        }
+
+        .project-list {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .project {
+            width: 300px;
+
+            padding: 25px;
+
+            background-color: #171f3d;
+
+            border-radius: 15px;
+
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 25px #28204c;
+        }
+
+        .project-number {
+            color: #ff4ecd;
+            font-size: 14px;
+        }
+
+        .project h3 {
+            color: #7c5cff;
+            margin: 12px 0;
+        }
+
+        .project p {
+            color: #c7c7d1;
+            line-height: 1.6;
+        }
+
+
+        /* Goals */
+
+        .goals {
+            text-align: center;
+        }
+
+        .goals p {
+            max-width: 700px;
+            margin: auto;
+
+            color: #c7c7d1;
+
+            line-height: 1.8;
+        }
+
+
+        /* Contact */
+
+        .contact {
+            background:
+                linear-gradient(
+                    135deg,
+                    #21134d,
+                    #101b3d
+                );
+
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 15px;
+            color: #ddd;
+        }
+
+        .contact a {
+            color: #ff4ecd;
+        }
+
+
+        /* Footer */
+
+        footer {
+            background-color: #080c18;
+            text-align: center;
+            padding: 25px;
+            color: #777;
+        }
+
+
+        /* Mobile */
+
+        @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 8px;
+            }
+
+            .home h1 {
+                font-size: 42px;
+            }
+
+            .home h3 {
+                font-size: 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- Navigation -->
+
+    <nav>
+
+        <h2>MyPortfolio.</h2>
+
+        <div>
+
+            <a href="#about">About</a>
+
+            <a href="#skills">Skills</a>
+
+            <a href="#projects">Projects</a>
+
+            <a href="#goals">Goals</a>
+
+            <a href="#contact">Contact</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Home -->
+
+    <section class="home">
+
+        <div class="home-text">
+
+            <p class="small-text">
+                HELLO, I'M
+            </p>
+
+            <h1>
+                 <span>Shushrutha</span>
+            </h1>
+
+            <h3>
+                Computer Science Student & Future Developer
+            </h3>
+
+            <p>
+                I am passionate about technology, programming
+                and creating things that solve real-world
+                problems. I am currently exploring web
+                development, artificial intelligence and
+                software development.
+            </p>
+
+            <a href="#about" class="button">
+                Explore My Journey →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+
+    <section class="about" id="about">
+
+        <h2 class="title">
+            About <span>Me</span>
+        </h2>
+
+        <div class="about-content">
+
+            <div class="about-box">
+
+                <p>
+                    I am a Computer Science student who enjoys
+                    learning by building projects.
+
+                    I believe that programming is not only about
+                    writing code, but also about finding creative
+                    solutions to problems.
+
+                    My current interests include web development,
+                    artificial intelligence and technology.
+                </p>
+
+            </div>
+
+
+            <div class="about-box info">
+
+                <p><b>🎓 Education:</b> B.Tech Computer Science</p>
+
+                <p><b>💻 Interest:</b> Web Development</p>
+
+                <p><b>🤖 Exploring:</b> AI & Machine Learning</p>
+
+                <p><b>🌱 Currently:</b> Learning & Building</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Skills -->
+
+    <section class="skills" id="skills">
+
+        <h2 class="title">
+            My <span>Skills</span>
+        </h2>
+
+        <div class="skill-list">
+
+            <div class="skill">
+                <h3>HTML</h3>
+                <p>Web Structure</p>
+            </div>
+
+            <div class="skill">
+                <h3>CSS</h3>
+                <p>Web Design</p>
+            </div>
+
+            <div class="skill">
+                <h3>JavaScript</h3>
+                <p>Web Interaction</p>
+            </div>
+
+            <div class="skill">
+                <h3>C</h3>
+                <p>Programming</p>
+            </div>
+
+            <div class="skill">
+                <h3>Python</h3>
+                <p>Programming</p>
+            </div>
+
+            <div class="skill">
+                <h3>AI / ML</h3>
+                <p>Exploring</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Projects -->
+
+    <section class="projects" id="projects">
+
+        <h2 class="title">
+            My <span>Projects</span>
+        </h2>
+
+        <div class="project-list">
+
+
+            <div class="project">
+
+                <p class="project-number">
+                    PROJECT 01
+                </p>
+
+                <h3>Personal Portfolio</h3>
+
+                <p>
+                    A personal portfolio website created using
+                    HTML, CSS and JavaScript to showcase my
+                    skills and projects.
+                </p>
+
+            </div>
+
+
+            <div class="project">
+
+                <p class="project-number">
+                    PROJECT 02
+                </p>
+
+                <h3>A Clone of Netflix</h3>
+
+                <p>
+                    A simple clone of Netflix created using
+                    HTML, CSS and JavaScript to practice
+                    web development skills.
+                </p>
+
+            </div>
+
+
+            <div class="project">
+
+                <p class="project-number">
+                    PROJECT 03
+                </p>
+
+                <h3>Future AI Project</h3>
+
+                <p>
+                    A future project where I plan to explore
+                    artificial intelligence and machine
+                    learning.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Goals -->
+
+    <section class="goals" id="goals">
+
+        <h2 class="title">
+            My <span>Goal</span>
+        </h2>
+
+        <p>
+            My goal is to continuously improve my technical
+            skills, work on meaningful projects and become
+            a developer capable of building technology that
+            is useful to people.
+        </p>
+
+        <br>
+
+        <p>
+            "Learn. Build. Fail. Improve. Repeat."
+        </p>
+
+    </section>
+
+
+    <!-- Contact -->
+
+    <section class="contact" id="contact">
+
+        <h2 class="title">
+            Let's <span>Connect</span>
+        </h2>
+
+        <p>
+            📧 Email:
+            <a href="mailto:shushrutha080@gmail.com">
+                shushrutha080@gmail.com
+            </a>
+        </p>
+
+        <p>
+            💻 GitHub:
+            <a href="https://github.com/shushrutha-sketch">
+                shushrutha-sketch
+            </a>
+        </p>
+
+        <p>
+            📍 India
+        </p>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 Shushrutha | Built with HTML,CSS and JS
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+
+    <script>
+
+        alert("Welcome to my portfolio! 🚀");
+
+    </script>
+
+
+</body>
+</html>
